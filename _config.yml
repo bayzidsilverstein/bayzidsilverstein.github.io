@@ -1,0 +1,16 @@
+title: Bayzid Silverstein
+description: Personal website of Bayzid Silverstein
+url: "https://bayzidsilverstein.github.io"
+markdown: kramdown
+permalink: /writings/:title/
+plugins: []
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: writing
+      permalink: /writings/:title/
+exclude:
+  - templates
+  - README-WRITINGS.md
