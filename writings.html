@@ -1,6 +1,10 @@
+---
+layout: null
+permalink: /writings.html
+---
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080808"><meta name="description" content="Writings — Bayzid Silverstein."><title>Writings — Bayzid Silverstein</title><link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body><div class="page"><header><a class="brand" href="index.html">Bayzid</a><nav aria-label="Main navigation"><a href="projects.html" >Projects</a><a href="writings.html" aria-current="page">Writings</a><a href="contact.html" >Contact</a></nav></header><main><div class="eyebrow">Notes & ideas</div><h1>Writings</h1><p class="intro">Thoughts, essays, notes, and ideas worth putting into words.</p>{% if site.posts.size > 0 %}<div class="writing-list">{% for post in site.posts %}<a class="writing-item" href="{{ post.url }}"><span class="writing-date">{{ post.date | date: "%B %-d, %Y" }}</span><strong>{{ post.title }}</strong><span class="writing-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</span></a>{% endfor %}</div>{% else %}<div class="empty">Your writing will appear here. New articles can be added using the Markdown template in the repository.</div>{% endif %}</main><footer><span>Bayzid Silverstein</span><span>© 2026</span></footer></div></body></html>
+<body><div class="page content"><header><a class="brand" href="index.html">Bayzid</a><nav aria-label="Main navigation"><a href="projects.html" >Projects</a><a href="writings.html" aria-current="page">Writings</a><a href="contact.html" >Contact</a></nav></header><main><div class="eyebrow">Notes & ideas</div><h1>Writings</h1><p class="intro">Thoughts, essays, notes, and ideas worth putting into words.</p>{% if site.posts.size > 0 %}<div class="writing-list">{% for post in site.posts %}<a class="writing-item" href="{{ post.url }}"><span class="writing-date">{{ post.date | date: "%B %-d, %Y" }}</span><strong>{{ post.title }}</strong><span class="writing-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</span></a>{% endfor %}</div>{% else %}<div class="empty">Your writing will appear here. New articles can be added using the Markdown template in the repository.</div>{% endif %}</main><footer><span>Bayzid Silverstein</span><span>© 2026</span></footer></div></body></html>
