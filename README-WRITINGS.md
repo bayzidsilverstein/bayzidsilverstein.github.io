@@ -1,33 +1,30 @@
-# Publishing a new writing
+# Updating your website
 
-Your website uses Jekyll, Markdown, and one shared stylesheet. You do not need to write HTML or CSS for articles.
+The website uses Jekyll and Markdown. Keep the HTML pages and shared CSS as they are; you can add writing and project entries using Markdown templates.
 
-## Add a new article
+## Publish an article
 
-1. Open the `_posts` folder in your repository. Create it if it does not exist.
-2. Add a Markdown file named using this format: `YYYY-MM-DD-your-article-title.md`.
-   Example: `2026-11-02-why-i-write.md`
-3. Copy the contents of `templates/writing-template.md` into the new file.
-4. Replace the title, subtitle, date, category, and sample text.
-5. Commit the file to the `main` branch. GitHub Pages will build and publish it.
-6. The article will automatically appear on the Writings page.
+1. Open `writing/articles/`.
+2. Copy `template.md` and rename the copy, for example `my-first-article.md`.
+3. Edit the title, subtitle, date, category, and article text.
+4. Set a unique permalink in the front matter, such as `/writing/articles/my-first-article/`.
+5. Commit the file. It will be rendered with the shared writing layout and listed on the Writings page.
 
-## Writing with Markdown
+## Add a project
 
-- `## Heading` creates a section heading.
-- A blank line separates paragraphs.
-- `**bold text**` makes text bold.
-- `*italic text*` makes text italic.
-- `> quotation` creates a blockquote.
-- `[link text](https://example.com)` creates a link.
+1. Open `projects/my-projects/`.
+2. Copy `template.md` and rename the copy, for example `my-website.md`.
+3. Edit the title, summary, date, and project details.
+4. Set a unique permalink, such as `/projects/my-projects/my-website/`.
+5. Commit the file. It will be rendered with the shared project layout and listed on the Projects page.
 
-Keep the YAML front matter at the top between the two sets of `---`. The date in the filename should match the date in the front matter.
+## Folder guide
 
-## Where the files live
+- `writing/writing.html` — Writings landing page.
+- `writing/articles/` — article Markdown files and the article template.
+- `projects/project.html` — Projects landing page.
+- `projects/my-projects/` — project Markdown files and the project template.
+- `_layouts/` — shared HTML layouts for articles and projects.
+- `assets/css/style.css` — shared styling for the website.
 
-- `_posts/` — your published articles.
-- `_layouts/writing.html` — shared article page layout.
-- `templates/writing-template.md` — copy this for every new article.
-- `assets/css/style.css` — shared design for the entire website.
-
-To edit the look of the website, change the CSS file rather than adding styles to individual HTML pages.
+You only need Markdown when adding an article or project. You do not need to write HTML or CSS for each entry.
