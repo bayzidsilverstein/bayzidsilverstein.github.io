@@ -2,15 +2,9 @@ title: Bayzid Silverstein
 description: Personal website of Bayzid Silverstein
 url: "https://bayzidsilverstein.github.io"
 markdown: kramdown
-permalink: /writings/:title/
+permalink: /:categories/:title/
 plugins: []
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: writing
-      permalink: /writings/:title/
 exclude:
-  - templates
   - README-WRITINGS.md
+  - writing/articles/template.md
+  - projects/my-projects/template.md
