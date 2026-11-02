@@ -1,9 +1,12 @@
 title: Bayzid Silverstein
 description: Personal website of Bayzid Silverstein
 url: "https://bayzidsilverstein.github.io"
+
 markdown: kramdown
 permalink: /:categories/:title/
+
 plugins: []
+
 exclude:
   - README-WRITINGS.md
   - writing/articles/template.md
