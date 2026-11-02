@@ -1,5 +1,47 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080808"><meta name="description" content="{{ page.description | default: site.description | escape }}"><title>{{ page.title | escape }} — {{ site.title }}</title><link rel="stylesheet" href="/assets/css/style.css"></head>
-<body><div class="page article"><header><a class="brand" href="/">Bayzid</a><nav aria-label="Main navigation"><a href="/projects/project.html" aria-current="page">Projects</a><a href="/writing/writing.html">Writings</a><a href="/contact.html">Contact</a></nav></header>
-<main><div class="eyebrow">Project</div><h1>{{ page.title | escape }}</h1>{% if page.description %}<p class="article-subtitle">{{ page.description | escape }}</p>{% endif %}<article class="article-body">{{ content }}</article><a class="back-link" href="/projects/project.html">← Back to all projects</a></main>
-<footer><span>Bayzid Silverstein</span><span>© {{ site.time | date: "%Y" }}</span></footer></div></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+
+  <title>{{ page.title | escape }} — {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="page article">
+    <header>
+      <a class="brand" href="/">Bayzid</a>
+
+      <nav aria-label="Main navigation">
+        <a href="/projects/project.html" aria-current="page">Projects</a>
+        <a href="/writing/writing.html">Writings</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="eyebrow">Project</div>
+      <h1>{{ page.title | escape }}</h1>
+
+      {% if page.description %}
+        <p class="article-subtitle">{{ page.description | escape }}</p>
+      {% endif %}
+
+      <article class="article-body">
+        {{ content }}
+      </article>
+
+      <a class="back-link" href="/projects/project.html">
+        ← Back to all projects
+      </a>
+    </main>
+
+    <footer>
+      <span>Bayzid Silverstein</span>
+      <span>© {{ site.time | date: "%Y" }}</span>
+    </footer>
+  </div>
+</body>
+</html>
