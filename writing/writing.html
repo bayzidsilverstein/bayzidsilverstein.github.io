@@ -2,10 +2,70 @@
 layout: null
 permalink: /writing/writing.html
 ---
+
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080808"><meta name="description" content="Writings — Bayzid Silverstein."><title>Writings — Bayzid Silverstein</title><link rel="stylesheet" href="/assets/css/style.css"></head>
-<body><div class="page content"><header><a class="brand" href="/">Bayzid</a><nav aria-label="Main navigation"><a href="/projects/project.html">Projects</a><a href="/writing/writing.html" aria-current="page">Writings</a><a href="/contact.html">Contact</a></nav></header>
-<main><div class="eyebrow">Notes & ideas</div><h1>Writings</h1><p class="intro">Thoughts, essays, notes, and ideas worth putting into words.</p>
-{% assign articles = site.pages | where_exp: "item", "item.path contains 'writing/articles/'" | sort: "date" | reverse %}
-{% if articles.size > 0 %}<div class="writing-list">{% for article in articles %}<a class="writing-item" href="{{ article.url }}"><span class="writing-date">{% if article.date %}{{ article.date | date: "%B %-d, %Y" }}{% else %}Article{% endif %}</span><strong>{{ article.title }}</strong><span class="writing-excerpt">{{ article.description | default: article.excerpt | strip_html | truncate: 160 }}</span></a>{% endfor %}</div>{% endif %}</main>
-<footer><span>Bayzid Silverstein</span><span>© {{ site.time | date: "%Y" }}</span></footer></div></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Writings — Bayzid Silverstein">
+
+  <title>Writings — Bayzid Silverstein</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="page content">
+    <header>
+      <a class="brand" href="/">Bayzid</a>
+
+      <nav aria-label="Main navigation">
+        <a href="/projects/project.html">Projects</a>
+        <a href="/writing/writing.html" aria-current="page">Writings</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="eyebrow">Notes &amp; ideas</div>
+      <h1>Writings</h1>
+      <p class="intro">
+        Thoughts, essays, notes, and ideas worth putting into words.
+      </p>
+
+      {% assign articles = site.pages
+        | where_exp: "item", "item.path contains 'writing/articles/'"
+        | sort: "date"
+        | reverse
+      %}
+
+      {% if articles.size > 0 %}
+        <div class="writing-list">
+          {% for article in articles %}
+            <a class="writing-item" href="{{ article.url }}">
+              <span class="writing-date">
+                {% if article.date %}
+                  {{ article.date | date: "%B %-d, %Y" }}
+                {% else %}
+                  Article
+                {% endif %}
+              </span>
+
+              <strong>{{ article.title }}</strong>
+
+              <span class="writing-excerpt">
+                {{ article.description | default: article.excerpt | strip_html | truncate: 160 }}
+              </span>
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </main>
+
+    <footer>
+      <span>Bayzid Silverstein</span>
+      <span>© {{ site.time | date: "%Y" }}</span>
+    </footer>
+  </div>
+</body>
+</html>
